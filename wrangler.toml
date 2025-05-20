@@ -1,0 +1,13 @@
+# wrangler.toml
+name = "my-mastra-app"
+main = "src/worker.ts"
+compatibility_date = "2025-05-19"
+workers_dev = true  # 启用 *.workers.dev 域名
+compatibility_flags = ["nodejs_compat"]  # 启用 nodejs_compat
+
+[vars]
+DEEPSEEK_API_KEY = "sk-d542f52"  # 替换为你的 DeepSeek API 密钥
+
+[[kv_namespaces]]  # 如果使用 KV 存储
+binding = "MASTRA_STORE"
+id = "5effc492bbd240a599ba1b59dff7c030"  # 替换为你的 KV Namespace ID
